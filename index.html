@@ -5,17 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mannrang – Launching Soon</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      background-color: #fff;
+      padding: 0;
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
     img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 600px; /* limits the image width on large screens */
       height: auto;
+      object-fit: contain;
+      padding: 20px;
     }
   </style>
 </head>
