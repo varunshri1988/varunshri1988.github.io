@@ -16,7 +16,9 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
@@ -24,18 +26,29 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1366px;
+      max-height: 768px;
+      width: 100%;
+      height: 100%;
     }
     img {
       width: 100%;
-      max-width: 600px;
-      height: auto;
+      height: 100%;
       object-fit: contain;
-      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <img src="Mannrang_(Mnrg)_Tea_Launching_Soon.png" alt="Launching Soon">
+  <div class="container">
+    <img src="Mannrang_(Mnrg)_Tea_Launching_Soon.png" alt="Launching Soon">
+  </div>
 </body>
 </html>
