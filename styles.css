@@ -110,8 +110,15 @@ html, body {
 
 /* HOME PAGE */
 .section-home {
-  text-align: center; align-items: center;
-  padding-top: 80px; min-height: 100vh;
+  text-align: center;
+  align-items: center;
+  padding-top: 110px; /* Ensures hero content starts below header on desktop/tablet */
+  min-height: 100vh;
+}
+@media (max-width: 480px) {
+  .section-home {
+    padding-top: 78px; /* Ensures hero content starts below header on mobile */
+  }
 }
 .hero-logo {
   max-width: 400px; width: 100%; margin-top: -20px;
@@ -360,3 +367,4 @@ html, body {
   body { background: white;}
   .section { page-break-inside: avoid;}
 }
+
