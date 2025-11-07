@@ -117,7 +117,7 @@ html, body {
 }
 @media (max-width: 480px) {
   .section-home {
-    padding-top: 120px; /* Ensures hero content starts below header on mobile */
+    padding-top: 50px; /* Ensures hero content starts below header on mobile */
   }
 }
 .hero-logo {
@@ -367,6 +367,7 @@ html, body {
   body { background: white;}
   .section { page-break-inside: avoid;}
 }
+
 
 
 
