@@ -548,3 +548,28 @@ body {
     max-width: 90%;
   }
 }
+
+/* ========================= NAV LOGO RESPONSIVE FIX ========================= */
+@media (max-width: 900px) {
+  .nav-logo {
+    height: auto;
+    max-height: 36px;
+    width: auto;
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-logo {
+    max-height: 32px;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-logo {
+    max-height: 28px;
+    max-width: 100px;
+  }
+}
+
