@@ -1,4 +1,12 @@
 // ===============================
+// Mannrang (Mnrg) — Redirect to HTTPS + www
+// ===============================
+if (location.protocol !== "https:" || !location.hostname.startsWith("www.")) {
+  const newUrl = "https://www.mannrang.com" + location.pathname + location.search + location.hash;
+  window.location.replace(newUrl);
+}
+
+// ===============================
 // Mannrang (Mnrg) — Entrance Animations Script
 // ===============================
 
