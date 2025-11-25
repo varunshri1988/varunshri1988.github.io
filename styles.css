@@ -573,3 +573,12 @@ body {
   }
 }
 
+@media (max-width: 900px) {
+  html,
+  body {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+  }
+}
+
+
