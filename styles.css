@@ -573,12 +573,14 @@ body {
   }
 }
 
+/* MOBILE FIX: Ensure background loads on phones */
 @media (max-width: 900px) {
-  html,
-  body {
-    background-attachment: scroll !important;
+  html, body {
+    background-image: url("./assets/website_background.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
     background-size: cover !important;
+    background-attachment: scroll !important;
+    background-color: #f5e3d0 !important;
   }
 }
-
-
