@@ -1,0 +1,41 @@
+{
+  "name": "Mannrang Tea",
+  "short_name": "Mannrang",
+  "description": "Small-batch Assam chai. Blended fresh per order. Shipped pan-India.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F8F4EE",
+  "theme_color": "#F8F4EE",
+  "lang": "en-IN",
+  "categories": ["food", "shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "./assets/Mnrg_Logo_TM_Black.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Brewing Guide",
+      "short_name": "Brew",
+      "description": "Step-by-step brewing walkthrough",
+      "url": "./brewing.html"
+    },
+    {
+      "name": "Order",
+      "short_name": "Order",
+      "description": "Order Mannrang Tea",
+      "url": "./order.html"
+    },
+    {
+      "name": "Compare Blends",
+      "short_name": "Compare",
+      "description": "Compare Blend No. 01 and Blend No. 02",
+      "url": "./compare.html"
+    }
+  ]
+}

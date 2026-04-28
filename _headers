@@ -1,0 +1,28 @@
+# ════════════════════════════════════════════════════════════════════
+# Mannrang Tea — HTTP Headers
+# Format: Cloudflare Pages / Netlify _headers file
+# Applied automatically when deployed on those platforms.
+# ════════════════════════════════════════════════════════════════════
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# ─── ASSETS ─── (long cache, immutable)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ─── HTML ─── (short cache, must revalidate)
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# ─── SERVICE WORKER ─── (never cache — always fetch latest)
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ─── MANIFEST ─── (one day cache)
+/manifest.webmanifest
+  Cache-Control: public, max-age=86400

@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F8F4EE" />
+  <meta name="color-scheme" content="light" />
+
+  <title>Order | Mannrang Tea</title>
+  <meta name="description" content="Order Mannrang Tea — Blend No. 01 Dustless and Blend No. 02 Bold. Available in 250g, 500g, and 1kg. Order directly via WhatsApp, shipped pan-India." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.mannrang.com/order.html" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+  <link rel="icon" href="./assets/Mnrg_Logo_TM_Black.png" />
+  <link rel="apple-touch-icon" href="./assets/Mnrg_Logo_TM_Black.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mannrang Tea" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="Order | Mannrang Tea" />
+  <meta property="og:description" content="Order Mannrang Tea — Blend No. 01 Dustless and Blend No. 02 Bold via WhatsApp. Shipped pan-India." />
+  <meta property="og:url" content="https://www.mannrang.com/order.html" />
+  <meta property="og:image" content="https://res.cloudinary.com/dmy9slbdp/image/upload/v1762708985/preview_v3_agbocr.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Order | Mannrang Tea" />
+  <meta name="twitter:description" content="Order Mannrang Tea via WhatsApp. Shipped pan-India." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/dmy9slbdp/image/upload/v1762708985/preview_v3_agbocr.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream:        #F8F4EE;
+      --cream-dark:   #EDD9BC;
+      --cream-mid:    #E8CEAB;
+      --sand:         #C8956A;
+      --sand-light:   #D4A87A;
+      --sand-dark:    #A97348;
+      --copper:       #B87333;
+      --copper-light: #CA8E55;
+      --copper-dark:  #8B5520;
+      --ink:          #1E1208;
+      --ink-mid:      #3D2410;
+      --ink-light:    #6B4423;
+      --white:        #FFFFFF;
+      --serif:        'Cormorant Garamond', Georgia, serif;
+      --sans:         'Jost', sans-serif;
+      --crimson:      'Crimson Pro', Georgia, serif;
+      --open:         'Open Sans', sans-serif;
+      --transition:   0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background-color: var(--cream-mid);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    /* ═══ NAVIGATION ═══ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 3rem;
+      background: rgba(248, 244, 238, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(184, 115, 51, 0.15);
+    }
+
+    nav .nav-logo img { height: 36px; width: auto; }
+    nav ul { display: flex; list-style: none; gap: 2.5rem; }
+
+    nav ul li a {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--copper);
+      transition: width var(--transition);
+    }
+
+    nav ul li a:hover { color: var(--copper); }
+    nav ul li a:hover::after { width: 100%; }
+    nav ul li a.active { color: var(--copper); }
+    nav ul li a.active::after { width: 100%; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 22px; height: 16px;
+      cursor: pointer;
+      background: none; border: none; padding: 0;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 100%; height: 1.5px;
+      background: var(--ink-mid);
+      transition: var(--transition);
+    }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(248, 244, 238, 0.98);
+      backdrop-filter: blur(12px);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .nav-mobile.open { display: flex; }
+
+    .nav-mobile a {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      transition: color var(--transition);
+    }
+
+    .nav-mobile a:hover { color: var(--copper); }
+
+    .nav-mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: none; border: none;
+      font-size: 1.5rem;
+      color: var(--ink-mid);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* ═══ ORDER SECTION ═══ */
+    #order {
+      padding: 10rem 3rem 6rem;
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 1.5rem; height: 1px;
+      background: var(--copper);
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    h2 em { font-style: italic; color: var(--copper); }
+
+    .shop-header {
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    .shop-header p {
+      color: var(--ink-light);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    /* ═══ BLEND GROUPS ═══ */
+    .blend-group {
+      margin-bottom: 4rem;
+    }
+
+    .blend-group-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .blend-group-title {
+      font-family: var(--open);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+    }
+
+    .blend-group-rule {
+      flex: 1;
+      height: 1px;
+      background: rgba(184,115,51,0.25);
+    }
+
+    /* ═══ ORDER CARDS ═══ */
+    .order-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 1100px;
+    }
+
+    .order-card {
+      padding: 2rem;
+      border: 1px solid rgba(184,115,51,0.2);
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .order-card:hover {
+      border-color: var(--copper);
+      transform: translateY(-3px);
+    }
+
+    .order-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--copper), var(--copper-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+
+    .order-card:hover::before { transform: scaleX(1); }
+
+    .order-card-location {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1rem;
+    }
+
+    .order-card-weight {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .order-card-price { margin: 1rem 0; }
+
+    .price-mrp {
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      text-decoration: line-through;
+    }
+
+    .price-offer {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--copper-dark);
+      font-weight: 400;
+    }
+
+    .price-label {
+      font-size: 0.7rem;
+      color: var(--copper);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+
+    .order-card-note {
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      margin-top: 0.5rem;
+    }
+
+    /* ═══ WHATSAPP BUTTON ═══ */
+    .whatsapp-wrap {
+      margin: 3rem 0 1.5rem;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da851;
+      transform: translateY(-1px);
+    }
+
+    .whatsapp-note {
+      margin-top: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      font-style: italic;
+    }
+
+    /* ═══ ORDER NOTES ═══ */
+    .order-notes {
+      margin-top: 2.5rem;
+      padding: 2rem;
+      border-left: 2px solid var(--copper);
+      background: var(--cream-dark);
+      max-width: 1100px;
+    }
+
+    .order-notes p {
+      font-size: 0.82rem;
+      color: var(--ink-mid);
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .order-notes p:last-child { margin-bottom: 0; }
+
+    /* ═══ PRICING CALCULATOR ═══ */
+    .pricing-calc {
+      margin: 3rem 0;
+      padding: 2rem;
+      border: 1px solid rgba(184,115,51,0.25);
+      border-left: 3px solid var(--copper);
+      background: var(--cream);
+      max-width: 1100px;
+    }
+
+    .pricing-calc-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-calc-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--copper);
+    }
+
+    .pricing-calc-label::before {
+      content: '';
+      display: inline-block;
+      width: 1.5rem; height: 1px;
+      background: var(--copper);
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .pricing-calc-title {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-calc-title em { font-style: italic; color: var(--copper); }
+
+    .pricing-calc-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-calc-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .pricing-calc-field-label {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper-dark);
+    }
+
+    .pricing-calc-select {
+      padding: 0.7rem 0.9rem;
+      border: 1px solid rgba(184,115,51,0.3);
+      background: var(--white);
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      color: var(--ink);
+      cursor: pointer;
+      transition: border-color var(--transition);
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%238B5520' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.9rem center;
+      padding-right: 2rem;
+    }
+
+    .pricing-calc-select:focus { outline: none; border-color: var(--copper); }
+
+    .pricing-calc-qty {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(184,115,51,0.3);
+      background: var(--white);
+      padding: 0 0.4rem;
+    }
+
+    .pricing-calc-qty-btn {
+      width: 28px; height: 28px;
+      border: none;
+      background: transparent;
+      color: var(--copper-dark);
+      font-family: var(--serif);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color var(--transition);
+    }
+
+    .pricing-calc-qty-btn:hover { color: var(--copper); }
+    .pricing-calc-qty-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+    .pricing-calc-qty-input {
+      flex: 1;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--ink);
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0.5rem 0;
+      width: 50px;
+      -moz-appearance: textfield;
+    }
+
+    .pricing-calc-qty-input::-webkit-outer-spin-button,
+    .pricing-calc-qty-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .pricing-calc-summary {
+      padding: 1.25rem 1.5rem;
+      background: var(--cream-dark);
+      border-left: 2px solid var(--copper);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .pricing-calc-summary-label {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--copper-dark);
+    }
+
+    .pricing-calc-mrp {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      text-decoration: line-through;
+      margin-right: 0.75rem;
+    }
+
+    .pricing-calc-total {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--copper-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .pricing-calc-savings {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--copper);
+      margin-top: 0.3rem;
+    }
+
+    .pricing-calc-meta {
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      margin-top: 1rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 700px) {
+      .pricing-calc-fields { grid-template-columns: 1fr; }
+      .pricing-calc-summary { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      background: var(--sand-dark);
+      color: rgba(245,232,213,0.7);
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    footer a { color: rgba(245,232,213,0.7); transition: color var(--transition); }
+    footer a:hover { color: var(--cream); }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      nav ul { gap: 1.2rem; }
+      nav ul li a { font-size: 0.68rem; }
+      #order { padding: 8rem 1.5rem 4rem; }
+      .order-cards { grid-template-columns: 1fr 1fr 1fr; max-width: 100%; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      nav { padding: 0.9rem 1.25rem; }
+      .nav-hamburger { display: flex; }
+      #order { padding: 6rem 1.25rem 3rem; }
+      .order-cards { grid-template-columns: 1fr; max-width: 100%; }
+      .whatsapp-btn { width: 100%; justify-content: center; }
+      h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    @media (max-width: 400px) {
+      #order { padding: 5.5rem 1rem 2.5rem; }
+      nav { padding: 0.8rem 1rem; }
+      .order-card { padding: 1.25rem; }
+    }
+  
+
+    /* ═══ ROBUSTNESS ADDITIONS ═══ */
+
+    /* Skip to main content (visible only when keyboard-focused) */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--copper);
+      color: var(--cream);
+      padding: 0.75rem 1.25rem;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 1rem;
+      outline: 2px solid var(--cream);
+      outline-offset: 2px;
+    }
+
+    /* Better focus indicators for keyboard users (does not affect mouse users) */
+    :focus-visible {
+      outline: 2px solid var(--copper);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* Honour user preference for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mannrang Tea",
+  "alternateName": "Mannrang Consumer Products & Services LLP",
+  "url": "https://www.mannrang.com",
+  "logo": "https://www.mannrang.com/assets/Mnrg_Logo_TM_Black.png",
+  "description": "Small-batch Assam chai brand. Blended fresh per order. Shipped pan-India.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-91603-00054",
+    "contactType": "Customer Service",
+    "availableLanguage": ["English", "Hindi"]
+  },
+  "sameAs": [
+    "https://www.instagram.com/mnrgcps/",
+    "https://www.linkedin.com/company/mannrang-consumer-products-services-llp/",
+    "https://www.facebook.com/share/1bGeHpkSne/?mibextid=wwXIfr",
+    "https://x.com/mnrgcps"
+  ]
+}</script>
+</head>
+
+<body>
+
+  <!-- Skip to content (visible only on keyboard focus) -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- NAVIGATION -->
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Mannrang Tea — Home">
+      <img src="./assets/Mnrg_Logo_TM_Black.png" alt="Mannrang Consumer Products and Services LLP logo" style="height:36px;width:auto;" />
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blend-01.html">Blend No. 01</a></li>
+      <li><a href="blend-02.html">Blend No. 02</a></li>
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="brewing.html">Brewing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="order.html" class="active">Order</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" id="nav-close" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <a href="blend-01.html">Blend No. 01</a>
+    <a href="blend-02.html">Blend No. 02</a>
+    <a href="compare.html">Compare</a>
+    <a href="brewing.html">Brewing</a>
+    <a href="about.html">About</a>
+    <a href="order.html">Order</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <section id="order" aria-label="Order Mannrang Tea via WhatsApp">
+
+      <div class="shop-header">
+        <p class="section-label">Order via WhatsApp</p>
+        <h2>WhatsApp to Order <em>Mannrang Tea</em></h2>
+        <p>We take orders directly via WhatsApp — no third-party platforms, no checkout pages, no warehouse delays. Just Mannrang Tea blended and shipped from Hyderabad to your door.</p>
+      </div>
+
+      <!-- BLEND NO. 01 -->
+      <div class="blend-group">
+        <div class="blend-group-header">
+          <span class="blend-group-title">Blend No. 01 — Dustless</span>
+          <div class="blend-group-rule"></div>
+        </div>
+        <div class="order-cards">
+          <div class="order-card">
+            <div class="order-card-location">📍 Hyderabad</div>
+            <div class="order-card-weight">250 g</div>
+            <div class="order-card-price">
+              <div class="price-mrp">MRP Rs. 200</div>
+              <div class="price-offer">Rs. 160</div>
+              <div class="price-label">Summer Offer</div>
+            </div>
+          </div>
+          <div class="order-card">
+            <div class="order-card-location">📦 Outside Hyderabad</div>
+            <div class="order-card-weight">500 g+</div>
+            <div class="order-card-price">
+              <div class="price-mrp">MRP Rs. 400</div>
+              <div class="price-offer">Rs. 320</div>
+              <div class="price-label">Summer Offer · MOQ 500g</div>
+            </div>
+            <div class="order-card-note">In multiples of 500g</div>
+          </div>
+          <div class="order-card">
+            <div class="order-card-location">📦 Pan-India</div>
+            <div class="order-card-weight">1 kg</div>
+            <div class="order-card-price">
+              <div class="price-mrp">MRP Rs. 600</div>
+              <div class="price-offer">Rs. 480</div>
+              <div class="price-label">Summer Offer</div>
+            </div>
+            <div class="order-card-note">Shipped pan-India</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLEND NO. 02 -->
+      <div class="blend-group">
+        <div class="blend-group-header">
+          <span class="blend-group-title">Blend No. 02 — Bold</span>
+          <div class="blend-group-rule"></div>
+        </div>
+        <div class="order-cards">
+          <div class="order-card">
+            <div class="order-card-location">📍 Hyderabad</div>
+            <div class="order-card-weight">250 g</div>
+            <div class="order-card-price">
+              <div class="price-mrp">MRP Rs. 200</div>
+              <div class="price-offer">Rs. 160</div>
+              <div class="price-label">Summer Offer</div>
+            </div>
+          </div>
+          <div class="order-card">
+            <div class="order-card-location">📦 Outside Hyderabad</div>
+            <div class="order-card-weight">500 g+</div>
+            <div class="order-card-price">
+              <div class="price-mrp">MRP Rs. 400</div>
+              <div class="price-offer">Rs. 320</div>
+              <div class="price-label">Summer Offer · MOQ 500g</div>
+            </div>
+            <div class="order-card-note">In multiples of 500g</div>
+          </div>
+          <div class="order-card">
+            <div class="order-card-location">📦 Pan-India</div>
+            <div class="order-card-weight">1 kg</div>
+            <div class="order-card-price">
+              <div class="price-mrp">MRP Rs. 600</div>
+              <div class="price-offer">Rs. 480</div>
+              <div class="price-label">Summer Offer</div>
+            </div>
+            <div class="order-card-note">Shipped pan-India</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ PRICING CALCULATOR ═══ -->
+      <div class="pricing-calc">
+        <p class="pricing-calc-label">Pricing Calculator</p>
+        <h3 class="pricing-calc-title">Estimate your <em>order total</em></h3>
+
+        <div class="pricing-calc-fields">
+          <div class="pricing-calc-field">
+            <span class="pricing-calc-field-label">Blend</span>
+            <select class="pricing-calc-select" id="calc-blend">
+              <option value="01">Blend No. 01 — Dustless</option>
+              <option value="02">Blend No. 02 — Bold</option>
+            </select>
+          </div>
+          <div class="pricing-calc-field">
+            <span class="pricing-calc-field-label">Pack Size</span>
+            <select class="pricing-calc-select" id="calc-size">
+              <option value="250">250 g</option>
+              <option value="500">500 g</option>
+              <option value="1000">1 kg</option>
+            </select>
+          </div>
+          <div class="pricing-calc-field">
+            <span class="pricing-calc-field-label">Quantity</span>
+            <div class="pricing-calc-qty">
+              <button class="pricing-calc-qty-btn" id="calc-qty-decrease" aria-label="Decrease quantity">−</button>
+              <input type="number" class="pricing-calc-qty-input" id="calc-qty" value="1" min="1" max="50" />
+              <button class="pricing-calc-qty-btn" id="calc-qty-increase" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-calc-summary">
+          <span class="pricing-calc-summary-label">Order Total</span>
+          <div>
+            <span class="pricing-calc-mrp" id="calc-mrp">MRP Rs. 200</span>
+            <span class="pricing-calc-total" id="calc-total">Rs. 160</span>
+            <div class="pricing-calc-savings" id="calc-savings">You save Rs. 40 · Summer Offer</div>
+          </div>
+        </div>
+
+        <p class="pricing-calc-meta">Total excludes shipping and handling. Final amount confirmed via WhatsApp before payment.</p>
+      </div>
+
+      <p>Send us a message with your name, complete delivery address, the blend, and the quantity you would like. We will respond with a quote including shipping charges and confirm your order once payment is received.</p>
+
+      <!-- WHATSAPP BUTTON -->
+      <div class="whatsapp-wrap">
+        <a href="https://wa.me/919160300054?text=Hi%2C%20I%20am%20on%20your%20website%20and%20would%20like%20to%20order%20Mannrang%20Tea.%20Please%20share%20the%20details."
+           class="whatsapp-btn"
+           target="_blank"
+           rel="noopener"
+           aria-label="Order Mannrang Tea on WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          WhatsApp us at +91 91603 00054
+        </a>
+        <p class="whatsapp-note">If you are placing this order from a computer, please ensure WhatsApp Web or WhatsApp Desktop is open and logged in before clicking above.</p>
+      </div>
+
+      <!-- ORDER NOTES -->
+      <div class="order-notes">
+        <p>No Cash on Delivery. All orders are 100% prepaid.</p>
+        <p>Card payments accepted. Processing charges applicable. Just request a payment link.</p>
+        <p>Shipping &amp; handling charges applicable and communicated before payment.</p>
+        <p>All purchases are final — no returns, refunds, or cancellations.</p>
+        <p>Delivery is handled by a third-party logistics provider. Mannrang is not liable for delivery-related delays or issues once the shipment is handed over.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© <span id="footer-year"></span> Mannrang Consumer Products &amp; Services LLP — All rights reserved.</span>
+    <span>
+      <a href="mailto:hello@mannrang.com">hello@mannrang.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/mnrgcps/" target="_blank" rel="noopener">Instagram</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/company/mannrang-consumer-products-services-llp/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.facebook.com/share/1bGeHpkSne/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+      &nbsp;·&nbsp;
+      <a href="https://x.com/mnrgcps?s=21&t=6e-lJUC1Ld4_qBkfcfxjog" target="_blank" rel="noopener">X</a>
+    </span>
+  </footer>
+
+  <script>
+    const isLocal = location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname === '';
+    if (!isLocal && (location.protocol !== 'https:' || !location.hostname.startsWith('www.'))) {
+      window.location.replace('https://www.mannrang.com' + location.pathname + location.search + location.hash);
+    }
+
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('nav-mobile');
+    const navClose  = document.getElementById('nav-close');
+
+    hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+    navClose.addEventListener('click',  () => navMobile.classList.remove('open'));
+    navMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMobile.classList.remove('open')));
+
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  // ═══════════════════════════════════════════════════════════════════
+    // PRICING CALCULATOR
+    // ═══════════════════════════════════════════════════════════════════
+    //
+    // ▼▼▼ EDIT PRICES HERE WHEN OFFER CHANGES ▼▼▼
+    //
+    // Each pack size (250, 500, 1000) has:
+    //   mrp     — the regular price
+    //   offer   — the current offer price
+    //   label   — what to display under the price (e.g. "Summer Offer")
+    //
+    // To change the offer, just update the "offer" and "label" values below.
+    // To remove the offer entirely, set offer = mrp and label = "".
+    //
+    // Both blends currently share the same pricing — edit each separately
+    // if you ever want them to differ.
+    //
+    const PRICING = {
+      '01': {
+        '250':  { mrp: 200, offer: 160, label: 'Summer Offer' },
+        '500':  { mrp: 400, offer: 320, label: 'Summer Offer' },
+        '1000': { mrp: 600, offer: 480, label: 'Summer Offer' }
+      },
+      '02': {
+        '250':  { mrp: 200, offer: 160, label: 'Summer Offer' },
+        '500':  { mrp: 400, offer: 320, label: 'Summer Offer' },
+        '1000': { mrp: 600, offer: 480, label: 'Summer Offer' }
+      }
+    };
+    //
+    // ▲▲▲ END OF PRICE CONFIG ▲▲▲
+    // ═══════════════════════════════════════════════════════════════════
+
+    (function() {
+      const MAX_QTY = 50;
+      const blendSelect = document.getElementById('calc-blend');
+      const sizeSelect = document.getElementById('calc-size');
+      const qtyInput = document.getElementById('calc-qty');
+      const qtyDecrease = document.getElementById('calc-qty-decrease');
+      const qtyIncrease = document.getElementById('calc-qty-increase');
+      const mrpDisplay = document.getElementById('calc-mrp');
+      const totalDisplay = document.getElementById('calc-total');
+      const savingsDisplay = document.getElementById('calc-savings');
+
+      function formatINR(amount) {
+        return 'Rs. ' + amount.toLocaleString('en-IN');
+      }
+
+      function update() {
+        let qty = parseInt(qtyInput.value) || 1;
+        if (qty < 1) qty = 1;
+        if (qty > MAX_QTY) qty = MAX_QTY;
+        qtyInput.value = qty;
+
+        const blend = blendSelect.value;
+        const size = sizeSelect.value;
+        const pricing = PRICING[blend][size];
+
+        const totalMRP = pricing.mrp * qty;
+        const totalOffer = pricing.offer * qty;
+        const savings = totalMRP - totalOffer;
+
+        if (savings > 0) {
+          mrpDisplay.style.display = 'inline';
+          mrpDisplay.textContent = 'MRP ' + formatINR(totalMRP);
+          totalDisplay.textContent = formatINR(totalOffer);
+          savingsDisplay.style.display = 'block';
+          savingsDisplay.textContent = 'You save ' + formatINR(savings) + (pricing.label ? ' · ' + pricing.label : '');
+        } else {
+          mrpDisplay.style.display = 'none';
+          totalDisplay.textContent = formatINR(totalOffer);
+          savingsDisplay.style.display = 'none';
+        }
+
+        qtyDecrease.disabled = qty <= 1;
+        qtyIncrease.disabled = qty >= MAX_QTY;
+      }
+
+      blendSelect.addEventListener('change', update);
+      sizeSelect.addEventListener('change', update);
+      qtyInput.addEventListener('input', update);
+      qtyInput.addEventListener('blur', update);
+      qtyDecrease.addEventListener('click', () => {
+        qtyInput.value = Math.max(1, parseInt(qtyInput.value) - 1);
+        update();
+      });
+      qtyIncrease.addEventListener('click', () => {
+        qtyInput.value = Math.min(MAX_QTY, parseInt(qtyInput.value) + 1);
+        update();
+      });
+
+      update();
+    })();
+  
+
+    // ═══ ROBUSTNESS ADDITIONS (a11y + service worker) ═══
+
+    // ARIA state management for mobile nav (mirrors the .open class)
+    (function() {
+      if (typeof navMobile === 'undefined' || typeof hamburger === 'undefined') return;
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-controls', 'nav-mobile');
+      navMobile.setAttribute('aria-hidden', 'true');
+      const mo = new MutationObserver(() => {
+        const isOpen = navMobile.classList.contains('open');
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        navMobile.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mo.observe(navMobile, { attributes: true, attributeFilter: ['class'] });
+
+      // Close drawer on Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMobile.classList.contains('open')) {
+          navMobile.classList.remove('open');
+        }
+      });
+
+      // Focus trap inside open drawer
+      navMobile.addEventListener('keydown', function(e) {
+        if (e.key !== 'Tab' || !navMobile.classList.contains('open')) return;
+        const focusable = navMobile.querySelectorAll('a, button');
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          last.focus();
+          e.preventDefault();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          first.focus();
+          e.preventDefault();
+        }
+      });
+    })();
+
+    // Service worker registration (only on production domain)
+    if ('serviceWorker' in navigator && location.hostname === 'www.mannrang.com') {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js').catch(function() {});
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F8F4EE" />
+  <meta name="color-scheme" content="light" />
+
+  <title>Brewing | Mannrang Tea</title>
+  <meta name="description" content="A guided brewing experience for Mannrang Tea. Choose your blend, set your cup count, and follow the brewing journey step by step." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.mannrang.com/brewing.html" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+  <link rel="icon" href="./assets/Mnrg_Logo_TM_Black.png" />
+  <link rel="apple-touch-icon" href="./assets/Mnrg_Logo_TM_Black.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mannrang Tea" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="Brewing | Mannrang Tea" />
+  <meta property="og:description" content="A guided brewing experience for Mannrang Tea." />
+  <meta property="og:url" content="https://www.mannrang.com/brewing.html" />
+  <meta property="og:image" content="https://res.cloudinary.com/dmy9slbdp/image/upload/v1762708985/preview_v3_agbocr.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brewing | Mannrang Tea" />
+  <meta name="twitter:description" content="A guided brewing experience for Mannrang Tea." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/dmy9slbdp/image/upload/v1762708985/preview_v3_agbocr.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream:        #F8F4EE;
+      --cream-dark:   #EDD9BC;
+      --cream-mid:    #E8CEAB;
+      --sand:         #C8956A;
+      --sand-light:   #D4A87A;
+      --sand-dark:    #A97348;
+      --copper:       #B87333;
+      --copper-light: #CA8E55;
+      --copper-dark:  #8B5520;
+      --ink:          #1E1208;
+      --ink-mid:      #3D2410;
+      --ink-light:    #6B4423;
+      --white:        #FFFFFF;
+      --serif:        'Cormorant Garamond', Georgia, serif;
+      --sans:         'Jost', sans-serif;
+      --crimson:      'Crimson Pro', Georgia, serif;
+      --open:         'Open Sans', sans-serif;
+      --transition:   0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 3rem;
+      background: rgba(248, 244, 238, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(184, 115, 51, 0.15);
+    }
+
+    nav .nav-logo img { height: 36px; width: auto; }
+    nav ul { display: flex; list-style: none; gap: 2rem; }
+
+    nav ul li a {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--copper);
+      transition: width var(--transition);
+    }
+
+    nav ul li a:hover { color: var(--copper); }
+    nav ul li a:hover::after { width: 100%; }
+    nav ul li a.active { color: var(--copper); }
+    nav ul li a.active::after { width: 100%; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 22px; height: 16px;
+      cursor: pointer;
+      background: none; border: none; padding: 0;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 100%; height: 1.5px;
+      background: var(--ink-mid);
+      transition: var(--transition);
+    }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(248, 244, 238, 0.98);
+      backdrop-filter: blur(12px);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .nav-mobile.open { display: flex; }
+
+    .nav-mobile a {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .nav-mobile a:hover { color: var(--copper); }
+
+    .nav-mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: none; border: none;
+      font-size: 1.5rem;
+      color: var(--ink-mid);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* HERO */
+    #brewing-hero {
+      padding: 9rem 3rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 1.5rem; height: 1px;
+      background: var(--copper);
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    h1 em { font-style: italic; color: var(--copper); }
+
+    .brewing-intro {
+      font-family: var(--crimson);
+      font-size: 1.1rem;
+      color: var(--ink-mid);
+      max-width: 640px;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 3rem;
+    }
+
+    /* PERSONALISE PANEL */
+    .personalise-panel {
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+      padding: 0 3rem;
+    }
+
+    .personalise-card {
+      background: var(--cream-dark);
+      border: 1px solid rgba(184,115,51,0.2);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .personalise-block-label {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--copper-dark);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .blend-toggle {
+      display: flex;
+      gap: 0;
+      border: 1px solid rgba(184,115,51,0.3);
+      background: var(--cream);
+      width: fit-content;
+    }
+
+    .blend-toggle-btn {
+      padding: 0.7rem 1.4rem;
+      background: transparent;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      cursor: pointer;
+      transition: all var(--transition);
+      border-right: 1px solid rgba(184,115,51,0.3);
+    }
+
+    .blend-toggle-btn:last-child { border-right: none; }
+    .blend-toggle-btn:hover { background: rgba(184,115,51,0.06); color: var(--copper-dark); }
+    .blend-toggle-btn.active { background: var(--copper); color: var(--cream); }
+
+    .cup-calculator {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cup-calc-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(184,115,51,0.4);
+      background: var(--cream);
+      color: var(--copper-dark);
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cup-calc-btn:hover { border-color: var(--copper); color: var(--copper); background: rgba(184,115,51,0.06); }
+    .cup-calc-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+    .cup-calc-input {
+      width: 70px;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--ink);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(184,115,51,0.25);
+      padding: 0.25rem 0;
+      outline: none;
+      -moz-appearance: textfield;
+    }
+
+    .cup-calc-input::-webkit-outer-spin-button,
+    .cup-calc-input::-webkit-inner-spin-button {
+      -webkit-appearance: none; margin: 0;
+    }
+
+    .cup-calc-input:focus { border-bottom-color: var(--copper); }
+
+    .cup-calc-suffix {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      letter-spacing: 0.05em;
+    }
+
+    .cup-calc-readout {
+      font-family: var(--crimson);
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      font-style: italic;
+    }
+
+    /* STORY */
+    #story-section {
+      padding: 0 3rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .story-container {
+      background: var(--cream);
+      border: 1px solid rgba(184,115,51,0.2);
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(74,55,40,0.08);
+    }
+
+    .story-header {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid rgba(184,115,51,0.15);
+      background: var(--cream-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .story-header-title {
+      font-family: var(--open);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--copper-dark);
+    }
+
+    .story-progress {
+      display: flex;
+      gap: 6px;
+      flex: 1;
+      max-width: 400px;
+      margin: 0 1.5rem;
+    }
+
+    .story-progress-bar {
+      flex: 1;
+      height: 2px;
+      background: rgba(184,115,51,0.2);
+      border-radius: 1px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .story-progress-bar.complete { background: var(--copper); }
+    .story-progress-bar.active { background: var(--copper); }
+
+    .story-step-counter {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--ink-mid);
+      font-style: italic;
+    }
+
+    .story-stage {
+      position: relative;
+      min-height: 540px;
+      background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .story-step {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 3rem 2rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .story-step.active { display: flex; opacity: 1; }
+
+    .step-num-large {
+      font-family: var(--serif);
+      font-size: 4rem;
+      font-style: italic;
+      color: var(--copper);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .step-detail {
+      font-family: var(--crimson);
+      font-size: 1.1rem;
+      color: var(--ink-mid);
+      max-width: 460px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .step-measure {
+      font-family: var(--open);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper-dark);
+      margin-top: 1rem;
+    }
+
+    /* SCENE 1: BLUE WATER */
+    .scene-water {
+      width: 200px; height: 200px;
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .scene-cup {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px; height: 110px;
+      border: 3px solid var(--copper-dark);
+      border-top: none;
+      border-radius: 0 0 70px 70px;
+      background: linear-gradient(180deg, transparent 0%, transparent 30%, #5a8db8 30%, #2e5680 100%);
+      overflow: hidden;
+    }
+
+    .scene-cup::after {
+      content: '';
+      position: absolute;
+      top: 30%;
+      left: 0; right: 0;
+      height: 4px;
+      background: rgba(255,255,255,0.5);
+      animation: ripple 2.5s ease-in-out infinite;
+    }
+
+    @keyframes ripple {
+      0%, 100% { transform: scaleX(1); opacity: 0.5; }
+      50% { transform: scaleX(0.7); opacity: 0.8; }
+    }
+
+    .steam {
+      position: absolute;
+      bottom: 110px;
+      width: 14px; height: 14px;
+      background: rgba(184,115,51,0.18);
+      border-radius: 50%;
+      filter: blur(8px);
+    }
+
+    .steam:nth-child(2) { left: 35%; animation: rise 3s ease-in infinite; }
+    .steam:nth-child(3) { left: 50%; animation: rise 3s ease-in 0.8s infinite; }
+    .steam:nth-child(4) { left: 65%; animation: rise 3s ease-in 1.6s infinite; }
+
+    @keyframes rise {
+      0% { bottom: 110px; opacity: 0; transform: translateX(0) scale(0.5); }
+      30% { opacity: 0.7; }
+      100% { bottom: 200px; opacity: 0; transform: translateX(15px) scale(1.5); }
+    }
+
+    /* SCENE 2: leaves */
+    .scene-leaves {
+      width: 200px; height: 200px;
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .leaf {
+      position: absolute;
+      width: 12px; height: 6px;
+      background: linear-gradient(135deg, #4a3018 0%, #6b4828 50%, #8b6238 100%);
+      border-radius: 50% 0 50% 0;
+      transform-origin: center;
+    }
+
+    .leaf:nth-child(1) { left: 30%; top: 10%; animation: fall1 3.5s ease-in infinite; }
+    .leaf:nth-child(2) { left: 55%; top: 0%; animation: fall2 3.5s ease-in 0.4s infinite; }
+    .leaf:nth-child(3) { left: 45%; top: 5%; animation: fall3 3.5s ease-in 0.9s infinite; }
+    .leaf:nth-child(4) { left: 65%; top: 15%; animation: fall1 3.5s ease-in 1.4s infinite; }
+    .leaf:nth-child(5) { left: 38%; top: 20%; animation: fall2 3.5s ease-in 1.9s infinite; }
+
+    @keyframes fall1 {
+      0% { top: -10%; transform: rotate(0deg); opacity: 0; }
+      15% { opacity: 1; }
+      100% { top: 75%; transform: rotate(540deg) translateX(-20px); opacity: 0.4; }
+    }
+    @keyframes fall2 {
+      0% { top: -10%; transform: rotate(0deg); opacity: 0; }
+      15% { opacity: 1; }
+      100% { top: 80%; transform: rotate(-720deg) translateX(15px); opacity: 0.4; }
+    }
+    @keyframes fall3 {
+      0% { top: -10%; transform: rotate(0deg); opacity: 0; }
+      15% { opacity: 1; }
+      100% { top: 78%; transform: rotate(900deg) translateX(-10px); opacity: 0.4; }
+    }
+
+    /* SCENE 3: simmer */
+    .scene-simmer {
+      width: 220px; height: 200px;
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .pot {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px; height: 130px;
+      border: 3px solid var(--ink-mid);
+      border-top: none;
+      border-radius: 0 0 90px 90px;
+      background: linear-gradient(180deg, transparent 0%, transparent 25%, #6b3818 25%, #3a1f0a 100%);
+      overflow: hidden;
+    }
+
+    .pot::before {
+      content: '';
+      position: absolute;
+      top: 25%;
+      left: 0; right: 0;
+      height: 8px;
+      background: linear-gradient(180deg, rgba(255,200,140,0.4) 0%, transparent 100%);
+      animation: simmer 1.2s ease-in-out infinite;
+    }
+
+    @keyframes simmer {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(2px); }
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: 30%;
+      width: 8px; height: 8px;
+      background: rgba(255,220,180,0.6);
+      border-radius: 50%;
+    }
+
+    .bubble:nth-child(2) { left: 40%; animation: bubbleUp 2s ease-in infinite; }
+    .bubble:nth-child(3) { left: 55%; animation: bubbleUp 2s ease-in 0.6s infinite; }
+    .bubble:nth-child(4) { left: 48%; animation: bubbleUp 2s ease-in 1.2s infinite; }
+    .bubble:nth-child(5) { left: 60%; animation: bubbleUp 2s ease-in 1.5s infinite; }
+
+    @keyframes bubbleUp {
+      0% { bottom: 30%; opacity: 0; transform: scale(0.5); }
+      30% { opacity: 1; }
+      100% { bottom: 70%; opacity: 0; transform: scale(1.5); }
+    }
+
+    /* BREW TIMER */
+    .brew-timer {
+      margin-top: 1.5rem;
+      padding: 0.85rem 1.25rem;
+      border: 1px solid rgba(184,115,51,0.25);
+      background: rgba(184,115,51,0.04);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .brew-timer-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper-dark);
+      flex-shrink: 0;
+    }
+
+    .brew-timer-input {
+      width: 52px;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(184,115,51,0.25);
+      padding: 0.2rem 0;
+      outline: none;
+      -moz-appearance: textfield;
+    }
+
+    .brew-timer-input::-webkit-outer-spin-button,
+    .brew-timer-input::-webkit-inner-spin-button {
+      -webkit-appearance: none; margin: 0;
+    }
+
+    .brew-timer-input:focus { border-bottom-color: var(--copper); }
+
+    .brew-timer-unit {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      color: var(--ink-light);
+      letter-spacing: 0.05em;
+    }
+
+    .brew-timer-display {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--copper-dark);
+      letter-spacing: 0.04em;
+      min-width: 60px;
+      flex-shrink: 0;
+    }
+
+    .brew-timer-display.running { color: var(--copper); }
+    .brew-timer-display.done { color: #2A7A40; animation: pulse 1s ease infinite; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .brew-timer-btn {
+      padding: 0.45rem 0.9rem;
+      border: 1px solid var(--copper);
+      background: transparent;
+      color: var(--copper);
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--transition);
+      flex-shrink: 0;
+    }
+
+    .brew-timer-btn:hover { background: var(--copper); color: var(--white); }
+    .brew-timer-btn.stop { border-color: #A04848; color: #A04848; }
+    .brew-timer-btn.stop:hover { background: #A04848; color: var(--white); }
+
+    /* SCENE 4: milk pour */
+    .scene-milk {
+      width: 220px; height: 200px;
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .milk-jug {
+      position: absolute;
+      top: 0;
+      right: 30%;
+      width: 60px; height: 70px;
+      background: #f5f0e5;
+      border: 2px solid var(--ink-mid);
+      border-radius: 8px 8px 4px 4px;
+      transform: rotate(-25deg);
+      transform-origin: bottom right;
+    }
+
+    .milk-jug::after {
+      content: '';
+      position: absolute;
+      right: -8px; top: 10px;
+      width: 12px; height: 4px;
+      background: #f5f0e5;
+      border: 2px solid var(--ink-mid);
+      border-left: none;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .milk-stream {
+      position: absolute;
+      top: 35px;
+      right: 25%;
+      width: 4px; height: 80px;
+      background: linear-gradient(180deg, rgba(245,240,229,0.9) 0%, rgba(245,240,229,0.6) 100%);
+      transform-origin: top;
+      animation: pour 2s ease-in-out infinite;
+    }
+
+    @keyframes pour {
+      0%, 100% { transform: scaleY(0); opacity: 0; }
+      30%, 70% { transform: scaleY(1); opacity: 1; }
+    }
+
+    .pot-final {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px; height: 110px;
+      border: 3px solid var(--ink-mid);
+      border-top: none;
+      border-radius: 0 0 90px 90px;
+      background: linear-gradient(180deg, transparent 0%, transparent 25%, #a87248 25%, #6b3818 100%);
+      transition: background 1.5s ease;
+    }
+
+    .pot-final.lighter {
+      background: linear-gradient(180deg, transparent 0%, transparent 25%, #d4a87a 25%, #a87248 100%);
+    }
+
+    /* SCENE 6: final cup */
+    .scene-final {
+      width: 200px; height: 200px;
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .final-cup {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px; height: 100px;
+      border: 3px solid var(--copper-dark);
+      border-top: none;
+      border-radius: 0 0 65px 65px;
+      background: linear-gradient(180deg, transparent 0%, transparent 25%, #c8956a 25%, #8b5520 100%);
+      overflow: hidden;
+    }
+
+    .final-cup::after {
+      content: '';
+      position: absolute;
+      top: 25%;
+      left: 0; right: 0;
+      height: 4px;
+      background: rgba(255,255,255,0.3);
+      animation: ripple 3s ease-in-out infinite;
+    }
+
+    .saucer {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px; height: 12px;
+      background: var(--copper-dark);
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(74,55,40,0.3);
+    }
+
+    .story-controls {
+      padding: 1.5rem 2rem;
+      border-top: 1px solid rgba(184,115,51,0.15);
+      background: var(--cream-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .story-btn {
+      padding: 0.6rem 1.4rem;
+      border: 1px solid var(--copper);
+      background: transparent;
+      color: var(--copper-dark);
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .story-btn:hover { background: var(--copper); color: var(--cream); }
+    .story-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+    .story-btn.primary { background: var(--copper); color: var(--cream); }
+    .story-btn.primary:hover { background: var(--copper-dark); border-color: var(--copper-dark); }
+
+    .story-controls-right { display: flex; gap: 0.75rem; }
+
+    .brewing-pack-notes {
+      max-width: 1100px;
+      margin: 2rem 3rem 0;
+      padding: 1.5rem 2rem;
+      border-left: 3px solid var(--copper);
+      background: var(--cream);
+    }
+
+    .brewing-pack-notes p {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      margin-bottom: 0.4rem;
+      line-height: 1.6;
+    }
+
+    .brewing-pack-notes p:last-child { margin-bottom: 0; }
+    .brewing-pack-notes strong { color: var(--ink); font-weight: 500; }
+
+    footer {
+      background: var(--sand-dark);
+      color: rgba(245,232,213,0.7);
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      margin-top: 4rem;
+    }
+
+    footer a { color: rgba(245,232,213,0.7); transition: color var(--transition); }
+    footer a:hover { color: var(--cream); }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      nav ul { gap: 1rem; }
+      nav ul li a { font-size: 0.66rem; }
+      #brewing-hero { padding: 7rem 1.5rem 2rem; }
+      .personalise-panel { padding: 0 1.5rem; }
+      .personalise-card { grid-template-columns: 1fr; gap: 1.75rem; padding: 1.5rem; }
+      #story-section { padding: 0 1.5rem 3rem; }
+      .brewing-pack-notes { margin: 2rem 1.5rem 0; padding: 1.25rem 1.5rem; }
+      .story-stage { min-height: 460px; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 2rem 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      nav { padding: 0.9rem 1.25rem; }
+      .nav-hamburger { display: flex; }
+      #brewing-hero { padding: 6rem 1rem 2rem; }
+      .personalise-panel { padding: 0 1rem; }
+      #story-section { padding: 0 1rem 2.5rem; }
+      .brewing-pack-notes { margin: 2rem 1rem 0; }
+      .story-header { padding: 0.9rem 1rem; flex-wrap: wrap; }
+      .story-progress { margin: 0.5rem 0; max-width: 100%; }
+      .story-controls { padding: 1rem; flex-wrap: wrap; }
+      .step-num-large { font-size: 3rem; }
+      .blend-toggle-btn { padding: 0.6rem 1rem; font-size: 0.65rem; }
+    }
+  
+
+    /* ═══ ROBUSTNESS ADDITIONS ═══ */
+
+    /* Skip to main content (visible only when keyboard-focused) */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--copper);
+      color: var(--cream);
+      padding: 0.75rem 1.25rem;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 1rem;
+      outline: 2px solid var(--cream);
+      outline-offset: 2px;
+    }
+
+    /* Better focus indicators for keyboard users (does not affect mouse users) */
+    :focus-visible {
+      outline: 2px solid var(--copper);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* Honour user preference for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mannrang Tea",
+  "alternateName": "Mannrang Consumer Products & Services LLP",
+  "url": "https://www.mannrang.com",
+  "logo": "https://www.mannrang.com/assets/Mnrg_Logo_TM_Black.png",
+  "description": "Small-batch Assam chai brand. Blended fresh per order. Shipped pan-India.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-91603-00054",
+    "contactType": "Customer Service",
+    "availableLanguage": ["English", "Hindi"]
+  },
+  "sameAs": [
+    "https://www.instagram.com/mnrgcps/",
+    "https://www.linkedin.com/company/mannrang-consumer-products-services-llp/",
+    "https://www.facebook.com/share/1bGeHpkSne/?mibextid=wwXIfr",
+    "https://x.com/mnrgcps"
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Brew Mannrang Tea",
+  "description": "A guided walkthrough of the Mannrang brewing process.",
+  "totalTime": "PT10M",
+  "tool": [
+    { "@type": "HowToTool", "name": "Saucepan or kettle" },
+    { "@type": "HowToTool", "name": "Strainer" },
+    { "@type": "HowToTool", "name": "Teacup" }
+  ],
+  "supply": [
+    { "@type": "HowToSupply", "name": "Mannrang Tea" },
+    { "@type": "HowToSupply", "name": "Water" },
+    { "@type": "HowToSupply", "name": "Milk (optional)" }
+  ],
+  "step": [
+    { "@type": "HowToStep", "name": "Boil the water", "text": "150 ml fresh water at 100\u00b0C per cup." },
+    { "@type": "HowToStep", "name": "Add the tea", "text": "One teaspoon of Mannrang Tea per cup." },
+    { "@type": "HowToStep", "name": "Simmer", "text": "Simmer for 3-7 minutes for full flavour." },
+    { "@type": "HowToStep", "name": "Add milk", "text": "50 ml of milk per cup, preferably skimmed or low-fat." },
+    { "@type": "HowToStep", "name": "Bring to a gentle boil", "text": "Once more \u2014 but gently." },
+    { "@type": "HowToStep", "name": "Strain and serve", "text": "Strain into your cup. Add sugar or sweetener as you like." }
+  ]
+}</script>
+</head>
+
+<body>
+
+  <!-- Skip to content (visible only on keyboard focus) -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Mannrang Tea — Home">
+      <img src="./assets/Mnrg_Logo_TM_Black.png" alt="Mannrang Tea logo" style="height:36px;width:auto;" />
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blend-01.html">Blend No. 01</a></li>
+      <li><a href="blend-02.html">Blend No. 02</a></li>
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="brewing.html" class="active">Brewing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" id="nav-close" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <a href="blend-01.html">Blend No. 01</a>
+    <a href="blend-02.html">Blend No. 02</a>
+    <a href="compare.html">Compare</a>
+    <a href="brewing.html">Brewing</a>
+    <a href="about.html">About</a>
+    <a href="order.html">Order</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <section id="brewing-hero">
+      <p class="section-label">Brewing</p>
+      <h1>The brewing <em>journey</em></h1>
+      <p class="brewing-intro">A guided walkthrough of the Mannrang brewing process. Choose your blend, set your cup count, and follow the steps. Six moments — from water to served.</p>
+    </section>
+
+    <section class="personalise-panel" aria-label="Personalise your brew">
+      <div class="personalise-card">
+
+        <div>
+          <span class="personalise-block-label">Choose your blend</span>
+          <div class="blend-toggle" role="group" aria-label="Select blend">
+            <button class="blend-toggle-btn active" data-blend="01" id="blend-btn-01">Blend No. 01</button>
+            <button class="blend-toggle-btn" data-blend="02" id="blend-btn-02">Blend No. 02</button>
+          </div>
+        </div>
+
+        <div>
+          <span class="personalise-block-label">Number of cups</span>
+          <div class="cup-calculator">
+            <button class="cup-calc-btn" id="cup-decrease" aria-label="Decrease cup count">−</button>
+            <input type="number" class="cup-calc-input" id="cup-count" value="1" min="1" max="50" />
+            <button class="cup-calc-btn" id="cup-increase" aria-label="Increase cup count">+</button>
+            <span class="cup-calc-suffix">(max 50)</span>
+            <span class="cup-calc-readout" id="cup-readout">For one teacup</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="story-section">
+      <div class="story-container">
+
+        <div class="story-header">
+          <span class="story-header-title" id="story-blend-name">Brewing Blend No. 01</span>
+          <div class="story-progress" id="progress">
+            <div class="story-progress-bar"></div>
+            <div class="story-progress-bar"></div>
+            <div class="story-progress-bar"></div>
+            <div class="story-progress-bar"></div>
+            <div class="story-progress-bar"></div>
+            <div class="story-progress-bar"></div>
+          </div>
+          <span class="story-step-counter" id="counter">Step 1 of 6</span>
+        </div>
+
+        <div class="story-stage" id="stage">
+
+          <div class="story-step active" data-step="1">
+            <div class="scene-water">
+              <div class="scene-cup"></div>
+              <div class="steam"></div>
+              <div class="steam"></div>
+              <div class="steam"></div>
+            </div>
+            <div class="step-num-large">01</div>
+            <h2 class="step-title">Boil the water</h2>
+            <p class="step-detail">Begin with fresh water, brought just to a boil. The first step is the foundation of the cup.</p>
+            <div class="step-measure"><span data-calc="water-ml">150</span> ml · 100°C</div>
+          </div>
+
+          <div class="story-step" data-step="2">
+            <div class="scene-leaves">
+              <div class="leaf"></div>
+              <div class="leaf"></div>
+              <div class="leaf"></div>
+              <div class="leaf"></div>
+              <div class="leaf"></div>
+            </div>
+            <div class="step-num-large">02</div>
+            <h2 class="step-title">Add the tea</h2>
+            <p class="step-detail">Add Mannrang. Watch the leaves meet the water and release their first colour.</p>
+            <div class="step-measure"><span data-calc="tea-tsp">1</span> Teaspoon<span data-calc="tea-plural"></span> · <span id="step2-blend-name">Mannrang Blend No. 01</span></div>
+          </div>
+
+          <div class="story-step" data-step="3">
+            <div class="scene-simmer">
+              <div class="pot"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+            </div>
+            <div class="step-num-large">03</div>
+            <h2 class="step-title">Simmer</h2>
+            <p class="step-detail">Let it simmer. The leaves will surrender their character to the water.</p>
+            <div class="step-measure" id="step3-measure">3–7 Minutes for full flavour</div>
+
+            <div class="brew-timer">
+              <span class="brew-timer-label">Set timer</span>
+              <input type="number" class="brew-timer-input" id="timer-minutes" value="6" min="1" max="10" />
+              <span class="brew-timer-unit" id="timer-unit">min (1–10)</span>
+              <span class="brew-timer-display" id="timer-display">06:00</span>
+              <button class="brew-timer-btn" id="timer-toggle">Start</button>
+            </div>
+          </div>
+
+          <div class="story-step" data-step="4">
+            <div class="scene-milk">
+              <div class="pot-final" id="pot-milk"></div>
+              <div class="milk-jug"></div>
+              <div class="milk-stream"></div>
+            </div>
+            <div class="step-num-large">04</div>
+            <h2 class="step-title">Add milk <em style="font-size:0.65em; color: var(--copper);">(optional)</em></h2>
+            <p class="step-detail">Pour the milk in slowly. The cup turns from deep amber to a warm, lighter shade.</p>
+            <div class="step-measure"><span data-calc="milk-ml">50</span> ml · Skimmed or Low-Fat</div>
+          </div>
+
+          <div class="story-step" data-step="5">
+            <div class="scene-simmer">
+              <div class="pot"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+            </div>
+            <div class="step-num-large">05</div>
+            <h2 class="step-title">Bring to a gentle boil <em style="font-size:0.65em; color: var(--copper);">(optional)</em></h2>
+            <p class="step-detail">Once more — but gently. Skip this step if using a non-dairy creamer.</p>
+            <div class="step-measure">Until just bubbling</div>
+          </div>
+
+          <div class="story-step" data-step="6">
+            <div class="scene-final">
+              <div class="final-cup"></div>
+              <div class="saucer"></div>
+              <div class="steam" style="left:35%;bottom:90px;"></div>
+              <div class="steam" style="left:50%;bottom:90px;animation-delay:0.8s;"></div>
+              <div class="steam" style="left:65%;bottom:90px;animation-delay:1.6s;"></div>
+            </div>
+            <div class="step-num-large">06</div>
+            <h2 class="step-title">Strain &amp; serve</h2>
+            <p class="step-detail">Strain into your cup. Add sugar or sweetener as you like. Your chai, chosen well.</p>
+            <div class="step-measure">Enjoy</div>
+          </div>
+
+        </div>
+
+        <div class="story-controls">
+          <button class="story-btn" id="btn-prev" disabled>← Previous</button>
+          <div class="story-controls-right">
+            <button class="story-btn" id="btn-restart">Restart</button>
+            <button class="story-btn primary" id="btn-next">Next →</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="brewing-pack-notes">
+        <p><strong>Note:</strong> Non-dairy creamers may not be suitable for boiling.</p>
+        <p><strong>Best Experience:</strong> For the finest cup, we recommend finishing your pack within two months of receiving your order.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© <span id="footer-year"></span> Mannrang Consumer Products &amp; Services LLP — All rights reserved.</span>
+    <span>
+      <a href="mailto:hello@mannrang.com">hello@mannrang.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/mnrgcps/" target="_blank" rel="noopener">Instagram</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/company/mannrang-consumer-products-services-llp/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.facebook.com/share/1bGeHpkSne/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+      &nbsp;·&nbsp;
+      <a href="https://x.com/mnrgcps?s=21&t=6e-lJUC1Ld4_qBkfcfxjog" target="_blank" rel="noopener">X</a>
+    </span>
+  </footer>
+
+  <script>
+    const isLocal = location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname === '';
+    if (!isLocal && (location.protocol !== 'https:' || !location.hostname.startsWith('www.'))) {
+      window.location.replace('https://www.mannrang.com' + location.pathname + location.search + location.hash);
+    }
+
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('nav-mobile');
+    const navClose  = document.getElementById('nav-close');
+
+    hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+    navClose.addEventListener('click',  () => navMobile.classList.remove('open'));
+    navMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMobile.classList.remove('open')));
+
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  // BLEND CONFIG
+    const BLENDS = {
+      '01': {
+        name: 'Blend No. 01',
+        simmerLabel: '3–7 Minutes for full flavour',
+        timerDefault: 6,
+        timerMax: 10,
+        timerUnit: 'min (1–10)'
+      },
+      '02': {
+        name: 'Blend No. 02',
+        simmerLabel: '1–3 Minutes for full flavour',
+        timerDefault: 3,
+        timerMax: 5,
+        timerUnit: 'min (1–5)'
+      }
+    };
+
+    const PER_CUP = { waterMl: 150, teaTsp: 1, milkMl: 50 };
+    let currentBlend = '01';
+
+    // URL parameter detection
+    const urlParams = new URLSearchParams(window.location.search);
+    const blendFromUrl = urlParams.get('blend');
+    if (blendFromUrl === '02') currentBlend = '02';
+
+    // BLEND TOGGLE
+    const blendBtn01 = document.getElementById('blend-btn-01');
+    const blendBtn02 = document.getElementById('blend-btn-02');
+
+    function setBlend(blend) {
+      currentBlend = blend;
+      const cfg = BLENDS[blend];
+
+      blendBtn01.classList.toggle('active', blend === '01');
+      blendBtn02.classList.toggle('active', blend === '02');
+
+      document.getElementById('story-blend-name').textContent = 'Brewing ' + cfg.name;
+      document.getElementById('step2-blend-name').textContent = 'Mannrang ' + cfg.name;
+      document.getElementById('step3-measure').textContent = cfg.simmerLabel;
+
+      const timerInput = document.getElementById('timer-minutes');
+      const timerUnit = document.getElementById('timer-unit');
+      timerInput.max = cfg.timerMax;
+      timerInput.value = cfg.timerDefault;
+      timerUnit.textContent = cfg.timerUnit;
+
+      resetTimer();
+    }
+
+    blendBtn01.addEventListener('click', () => setBlend('01'));
+    blendBtn02.addEventListener('click', () => setBlend('02'));
+
+    // CUP CALCULATOR
+    const MAX_CUPS = 50;
+    const cupInput = document.getElementById('cup-count');
+    const cupReadout = document.getElementById('cup-readout');
+    const decreaseBtn = document.getElementById('cup-decrease');
+    const increaseBtn = document.getElementById('cup-increase');
+
+    function updateCupValues() {
+      let cups = parseInt(cupInput.value) || 1;
+      if (cups < 1) cups = 1;
+      if (cups > MAX_CUPS) cups = MAX_CUPS;
+      cupInput.value = cups;
+
+      cupReadout.textContent = cups === 1 ? 'For one teacup' : 'For ' + cups + ' teacups';
+
+      document.querySelector('[data-calc="water-ml"]').textContent = PER_CUP.waterMl * cups;
+      document.querySelector('[data-calc="tea-tsp"]').textContent = PER_CUP.teaTsp * cups;
+      document.querySelector('[data-calc="tea-plural"]').textContent = (PER_CUP.teaTsp * cups) > 1 ? 's' : '';
+      document.querySelector('[data-calc="milk-ml"]').textContent = PER_CUP.milkMl * cups;
+
+      decreaseBtn.disabled = cups <= 1;
+      increaseBtn.disabled = cups >= MAX_CUPS;
+    }
+
+    decreaseBtn.addEventListener('click', () => {
+      cupInput.value = Math.max(1, parseInt(cupInput.value) - 1);
+      updateCupValues();
+    });
+
+    increaseBtn.addEventListener('click', () => {
+      cupInput.value = Math.min(MAX_CUPS, parseInt(cupInput.value) + 1);
+      updateCupValues();
+    });
+
+    cupInput.addEventListener('input', updateCupValues);
+    cupInput.addEventListener('blur', updateCupValues);
+
+    // STORY MODE
+    let currentStep = 1;
+    const totalSteps = 6;
+    const stage = document.getElementById('stage');
+    const counter = document.getElementById('counter');
+    const progress = document.getElementById('progress');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const btnRestart = document.getElementById('btn-restart');
+
+    function showStep(n) {
+      stage.querySelectorAll('.story-step').forEach(s => s.classList.remove('active'));
+      stage.querySelector(`[data-step="${n}"]`).classList.add('active');
+
+      counter.textContent = `Step ${n} of ${totalSteps}`;
+
+      progress.querySelectorAll('.story-progress-bar').forEach((bar, i) => {
+        bar.classList.remove('active', 'complete');
+        if (i + 1 < n) bar.classList.add('complete');
+        else if (i + 1 === n) bar.classList.add('active');
+      });
+
+      if (n === 4) {
+        const pot = document.getElementById('pot-milk');
+        if (pot) {
+          pot.classList.remove('lighter');
+          setTimeout(() => pot.classList.add('lighter'), 600);
+        }
+      }
+
+      btnPrev.disabled = n === 1;
+      btnNext.textContent = n === totalSteps ? 'Done ✓' : 'Next →';
+    }
+
+    btnNext.addEventListener('click', () => {
+      if (currentStep < totalSteps) { currentStep++; showStep(currentStep); }
+    });
+
+    btnPrev.addEventListener('click', () => {
+      if (currentStep > 1) { currentStep--; showStep(currentStep); }
+    });
+
+    btnRestart.addEventListener('click', () => {
+      currentStep = 1;
+      showStep(currentStep);
+    });
+
+    // BREW TIMER
+    const timerInput = document.getElementById('timer-minutes');
+    const timerDisplay = document.getElementById('timer-display');
+    const timerToggle = document.getElementById('timer-toggle');
+
+    let intervalId = null;
+    let secondsLeft = 0;
+    let isRunning = false;
+
+    function formatTime(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = seconds % 60;
+      return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    }
+
+    function setDisplay(seconds) { timerDisplay.textContent = formatTime(seconds); }
+
+    function updateTimerFromInput() {
+      const cfg = BLENDS[currentBlend];
+      let mins = parseInt(timerInput.value) || 1;
+      if (mins < 1) mins = 1;
+      if (mins > cfg.timerMax) mins = cfg.timerMax;
+      timerInput.value = mins;
+      if (!isRunning) {
+        secondsLeft = mins * 60;
+        setDisplay(secondsLeft);
+      }
+    }
+
+    function playChime() {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const playTone = (freq, start, duration) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.frequency.value = freq;
+          osc.type = 'sine';
+          gain.gain.setValueAtTime(0, ctx.currentTime + start);
+          gain.gain.linearRampToValueAtTime(0.18, ctx.currentTime + start + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + start + duration);
+          osc.start(ctx.currentTime + start);
+          osc.stop(ctx.currentTime + start + duration);
+        };
+        playTone(523.25, 0, 0.5);
+        playTone(659.25, 0.18, 0.5);
+        playTone(783.99, 0.36, 0.7);
+      } catch (e) { /* silent */ }
+    }
+
+    function startTimer() {
+      if (secondsLeft <= 0) updateTimerFromInput();
+      isRunning = true;
+      timerDisplay.classList.remove('done');
+      timerDisplay.classList.add('running');
+      timerToggle.textContent = 'Stop';
+      timerToggle.classList.add('stop');
+
+      intervalId = setInterval(() => {
+        secondsLeft--;
+        setDisplay(secondsLeft);
+        if (secondsLeft <= 0) {
+          clearInterval(intervalId);
+          isRunning = false;
+          timerDisplay.classList.remove('running');
+          timerDisplay.classList.add('done');
+          timerToggle.textContent = 'Reset';
+          timerToggle.classList.remove('stop');
+          playChime();
+        }
+      }, 1000);
+    }
+
+    function stopTimer() {
+      clearInterval(intervalId);
+      isRunning = false;
+      timerDisplay.classList.remove('running', 'done');
+      timerToggle.textContent = 'Start';
+      timerToggle.classList.remove('stop');
+      updateTimerFromInput();
+    }
+
+    function resetTimer() {
+      clearInterval(intervalId);
+      isRunning = false;
+      timerDisplay.classList.remove('running', 'done');
+      timerToggle.textContent = 'Start';
+      timerToggle.classList.remove('stop');
+      updateTimerFromInput();
+    }
+
+    timerToggle.addEventListener('click', () => {
+      if (timerToggle.textContent === 'Start') startTimer();
+      else if (timerToggle.textContent === 'Stop') stopTimer();
+      else if (timerToggle.textContent === 'Reset') resetTimer();
+    });
+
+    timerInput.addEventListener('input', updateTimerFromInput);
+    timerInput.addEventListener('blur', updateTimerFromInput);
+
+    // INIT
+    setBlend(currentBlend);
+    updateCupValues();
+    showStep(1);
+  
+
+    // ═══ ROBUSTNESS ADDITIONS (a11y + service worker) ═══
+
+    // ARIA state management for mobile nav (mirrors the .open class)
+    (function() {
+      if (typeof navMobile === 'undefined' || typeof hamburger === 'undefined') return;
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-controls', 'nav-mobile');
+      navMobile.setAttribute('aria-hidden', 'true');
+      const mo = new MutationObserver(() => {
+        const isOpen = navMobile.classList.contains('open');
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        navMobile.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mo.observe(navMobile, { attributes: true, attributeFilter: ['class'] });
+
+      // Close drawer on Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMobile.classList.contains('open')) {
+          navMobile.classList.remove('open');
+        }
+      });
+
+      // Focus trap inside open drawer
+      navMobile.addEventListener('keydown', function(e) {
+        if (e.key !== 'Tab' || !navMobile.classList.contains('open')) return;
+        const focusable = navMobile.querySelectorAll('a, button');
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          last.focus();
+          e.preventDefault();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          first.focus();
+          e.preventDefault();
+        }
+      });
+    })();
+
+    // Service worker registration (only on production domain)
+    if ('serviceWorker' in navigator && location.hostname === 'www.mannrang.com') {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js').catch(function() {});
+      });
+    }
+  </script>
+
+</body>
+</html>
