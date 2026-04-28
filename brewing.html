@@ -406,26 +406,22 @@
       position: relative;
       min-height: 540px;
       background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
-      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .story-step {
-      position: absolute;
-      inset: 0;
+      width: 100%;
       display: none;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       padding: 3rem 2rem;
       text-align: center;
-      opacity: 0;
-      transition: opacity 0.6s ease;
     }
 
-    .story-step.active { display: flex; opacity: 1; }
+    .story-step.active { display: flex; }
 
     .step-num-large {
       font-family: var(--serif);
@@ -1390,9 +1386,25 @@
       }
     }
 
+    // Shared AudioContext — created/unlocked on first user gesture.
+    // iOS Safari requires this; otherwise the chime stays silent.
+    let _audioCtx = null;
+    function ensureAudioContext() {
+      if (!_audioCtx) {
+        try {
+          _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        } catch (e) { return null; }
+      }
+      if (_audioCtx.state === 'suspended') {
+        _audioCtx.resume().catch(() => {});
+      }
+      return _audioCtx;
+    }
+
     function playChime() {
+      const ctx = ensureAudioContext();
+      if (!ctx) return;
       try {
-        const ctx = new (window.AudioContext || window.webkitAudioContext)();
         const playTone = (freq, start, duration) => {
           const osc = ctx.createOscillator();
           const gain = ctx.createGain();
@@ -1454,7 +1466,10 @@
     }
 
     timerToggle.addEventListener('click', () => {
-      if (timerToggle.textContent === 'Start') startTimer();
+      if (timerToggle.textContent === 'Start') {
+        ensureAudioContext();   // unlock iOS audio on user gesture
+        startTimer();
+      }
       else if (timerToggle.textContent === 'Stop') stopTimer();
       else if (timerToggle.textContent === 'Reset') resetTimer();
     });
